@@ -1,0 +1,19 @@
+<ion-view view-title="รายชื่อห้องที่พบ" id="playlists">
+<ion-nav-bar class="bar-assertive" align-title="left"><ion-nav-back-button class="button-clear">back</ion-nav-back-button></ion-nav-bar>
+  <ion-content>
+  <div class="spacer" style="height: 2%;"></div>
+    <ion-list>
+      <ion-item ui-sref="#/app/playlists/{{lists.id}}" ng-repeat="lists in ALL">
+      <div class="item item-body">
+      <img class="full-image" src="{{lists.image}}">
+        <h2>{{lists.title}}</h2>
+        <p>{{lists.id}}</p>
+        <p>{{lists.author}}</p>
+        <p>{{lists.description}}</p>
+      </div>
+      </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

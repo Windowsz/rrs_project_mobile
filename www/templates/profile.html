@@ -1,0 +1,46 @@
+<ion-view title="ตั้งค่าโปรไฟล์" id="profile">
+  <ion-content>
+    <div class="spacer" style="width: 300px; height: 15px;"></div>
+    <form class="list">
+      <label class="item item-input">
+        <span class="input-label">ชื่อ-สกุล</span>
+        <input type="text" placeholder="ชื่อ-นามสกุล">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">เบอร์โทร</span>
+        <input type="tel" placeholder="00 0000 0000">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">อีเมล</span>
+        <input type="email" placeholder="00000000@kmitl.ac.th">
+      </label>
+      <label class="item item-select">
+        <span class="input-label">คณะ</span>
+        <select>
+          <option>คณะวิศวกรรมศาสตร์</option>
+          <option>คณะสถาปัตยกรรมศาสตร์</option>
+          <option>คณะครุศาสตร์อุตสาหกรรม</option>
+          <option>คณะวิทยาศาสตร์</option>
+          <option>คณะเทคโนโลยีการเกษตร</option>
+          <option>คณะอุตสาหกรรมเกษตร</option>
+          <option>คณะเทคโนโลยีสารสนเทศ</option>
+          <option>วิทยาลัยนานาชาติ</option>
+          <option>วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+          <option>วิทยาลัยการบริหารและจัดการ</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">รหัสผ่านเก่า</span>
+        <input type="password">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">รหัสผ่านใหม่</span>
+        <input type="password">
+      </label>
+    </form>
+    <div class="button-bar">
+      <button class="button button-positive  button-block" ng-click="showConfirm(res)">ตกลง</button>
+      <a class="button button-positive  button-block" ng-click="goHome()">ยกเลิก</a>
+    </div>
+  </ion-content>
+</ion-view>

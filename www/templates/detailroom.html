@@ -1,0 +1,25 @@
+<ion-view title="ข้อมูลห้อง" id="detailroom">
+<ion-nav-back-button class="button-clear"></ion-nav-back-button>
+  <ion-content padding="true" class="has-header">
+    <h3 align="center">ห้องสัมนากลุ่มย่อย 1</h3>
+    <div class="spacer" style="width: 300px; height: 9px;"></div>
+    <ion-slides disable-side-menu-drag="" options="{'loop': true}" slider="slider2" delegate-handle="slider2" style="width:100%;height:200px;">
+      <ion-slide-page style="background:url("http://localhost:3000/upload/Image_99aefa8.jpg") no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page style="background:url("http://localhost:3000/upload/Image_99aefa8.jpg") no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page style="background:url("http://localhost:3000/upload/Image_99aefa8.jpg") no-repeat center;background-size:cover;"></ion-slide-page>
+    </ion-slides>
+    <div class="spacer" style="width: 300px; height: 18px;"></div>
+    <h4 id="page9-heading15">สิ่งอำนวยความสะดวกภายในห้อง</h4>
+    <ion-list>
+      <ion-item class="item-icon-left">
+        <i class="icon ion-easel"></i>กระดาน</ion-item>
+      <ion-item class="item-icon-left">
+        <i class="icon ion-mic-b"></i>ไมค์</ion-item>
+      <label class="item item-input">
+        <span class="input-label">เวลาเข้าใช้งาน</span>
+        <input type="time">
+      </label>
+    </ion-list>
+    <a ui-sref="confirm" class="button button-positive button-block">จองห้องนี้!</a>
+  </ion-content>
+</ion-view>

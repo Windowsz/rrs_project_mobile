@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "495177425794",
+    "firebase_url": "https://notificate-98ba0.firebaseio.com",
+    "project_id": "notificate-98ba0",
+    "storage_bucket": "notificate-98ba0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495177425794:android:f1fca6d5638bf8af",
+        "android_client_info": {
+          "package_name": "com.ionicframework.roomreservation11335227"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495177425794-95odsvl7bc8niksb5ls1n4nlsb4s8v7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

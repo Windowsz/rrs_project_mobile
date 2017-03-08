@@ -1,0 +1,77 @@
+<ion-view title="สมัครสมาชิก" id="reg1">
+<ion-nav-bar class="bar-positive" align-title="left"><ion-nav-back-button class="button-clear"></ion-nav-back-button>
+		<ion-nav-title>สมัครสมาชิก</ion-nav-title>
+	</ion-nav-bar>
+  <ion-content padding="true" class="has-header">
+    <form class="list">
+      <ion-list>
+        <label class="item item-input">
+          <span class="input-label">ชื่อ - สกุล</span>
+          <input type="text" placeholder="">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" placeholder="">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">อีเมล</span>
+          <input type="email" placeholder="example@kmitl.ac.th">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">รหัสนักศึกษา</span>
+          <input type="text" placeholder="รหัสประจำตัวนักศึกษา">
+        </label>
+        <label class="item item-select">
+          <span class="input-label">คณะ</span>
+          <select>
+            <option>คณะวิศวกรรมศาสตร์</option>
+            <option>คณะสถาปัตยกรรมศาสตร์</option>
+            <option>คณะครุศาสตร์อุตสาหกรรม</option>
+            <option>คณะวิทยาศาสตร์</option>
+            <option>คณะเทคโนโลยีการเกษตร</option>
+            <option>คณะเทคโนโลยีสารสนเทศ</option>
+            <option>คณะอุตสาหกรรมเกษตร</option>
+            <option>วิทยาลัยนานาชาติ</option>
+            <option>วิทยาเขตชุมพร</option>
+            <option>วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</option>
+            <option>วิทยาลัยการบริหารและจัดการ</option>
+          </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">โทรศัพท์</span>
+          <input type="tel" placeholder="08 000 0000">
+        </label>
+      </ion-list>
+      <div>
+        <ion-item>
+          <ion-label ng-readonly="all">
+                1.
+            <br>2.
+            <br>3.
+            <br>4.
+            <br>5.
+            <br>6.
+            <br>7.
+            <br>8.
+            <br>9.
+            <br>10.
+            </ion-label>
+          <ion-textarea></ion-textarea>
+        <li class="item item-checkbox">
+        ยอมรับข้อตกลง
+        <label class="checkbox">
+        <input type="checkbox" ng-model="checked">
+        </label>
+        </li>
+          <br>
+          <button ng-disabled="!checked" class="button button-block button-positive" ng-click="showAlert(res)">สมัครสมาชิก</button>
+          <button class="button button-block button-assertive" ng-click="cancel()">ยกเลิก</button>
+        </ion-item>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

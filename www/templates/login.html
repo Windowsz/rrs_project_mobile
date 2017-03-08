@@ -1,0 +1,25 @@
+<ion-view title="Sign-In">
+        <ion-content>
+        <img src="img/signinicon.jpg" style="width: 90%; margin: 5%;">
+          <h2 style="text-align:center; color: orange;">ระบบการจองห้อง</h2>
+        <div class="spacer" style="height: 10px"></div>
+        <form class="list">
+          <div class="card">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">ชื่อผู้ใช้</span>
+              <input type="text" ng-model="user.username" placeholder="ชื่อผู้ใช้">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label label-block">รหัสผ่าน</span>
+              <input type="password" ng-model="user.password" placeholder="รหัสผ่าน">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-assertive" style="border-radius: 20px;" ng-click="LogIn(user)">
+              เข้าสู่ระบบ
+            </button>
+            <a ui-sref="forgotpass" style="font-weight:600;text-align:right;border-radius: 20px;" class="button button-stable button-block button-clear">ลืมรหัสผ่าน</a>
+            <a ui-sref="regchoose" style="font-weight:600;text-align:right;border-radius: 20px;" class="button button-stable button-block button-clear">สมัครสมาชิก</a>
+          </div>
+        </ion-content>
+      </ion-view>
