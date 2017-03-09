@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic','starter.controllers'])
+angular.module('Roomreservation', ['ionic','Roomreservation.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -65,7 +65,8 @@ angular.module('starter', ['ionic','starter.controllers'])
     url: "/cancel",
     views: {
       'menuContent': {
-        templateUrl: "templates/cancel.html"
+        templateUrl: "templates/cancel.html",
+        controller: 'CancelCtrl'
       }
     }
   })
