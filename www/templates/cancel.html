@@ -1,38 +1,32 @@
 <ion-view title="สถานะการจองห้อง" id="cancel">
-  <ion-content padding="true" class="has-header">
-    <h4 style="color:#000000;">รายการจองห้อง</h4>
-<ion-list>
-  <ion-item ng-repeat="item in items">
-    Hello, {{item}}!
-  </ion-item>
-</ion-list>
-Advanced Usage: Thumbnails, Delete buttons, Reordering, Swiping
+    <ion-header-bar>
+      <h1 class="title">สถานะการจองห้อง</h1>
+    </ion-header-bar>
+    <ion-content>
+      <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
+      
+      <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
 
-<ion-list ng-controller="CancelCtrl"
-          show-delete="shouldShowDelete"
-          can-swipe="listCanSwipe">
-  <ion-item ng-repeat="item in items"
-            class="item-thumbnail-left">
-
-    <img ng-src="{{item.img}}">
-    <h2>{{item.title}}</h2>
-    <p>{{item.description}}</p>
-    <ion-option-button class="button-positive"
-                       ng-click="share(item)">
-      Share
-    </ion-option-button>
-    <ion-option-button class="button-info"
-                       ng-click="edit(item)">
-      Edit
-    </ion-option-button>
-    <ion-delete-button class="ion-minus-circled"
-                       ng-click="items.splice($index, 1)">
-    </ion-delete-button>
-    <ion-reorder-button class="ion-navicon"
-                        on-reorder="reorderItem(item, $fromIndex, $toIndex)">
-    </ion-reorder-button>
-
-  </ion-item>
-</ion-list>
-  </ion-content>
+        <ion-item ng-repeat="item in items" 
+                  item="item"
+                  href="#/item/{{item.id}}" class="item-remove-animate">
+          Item {{ item.id }}
+          <ion-delete-button class="ion-minus-circled" 
+                             ng-click="onItemDelete(item)">
+          </ion-delete-button>
+          <ion-option-button class="button-assertive"
+                             ng-click="edit(item)">
+            Edit
+          </ion-option-button>
+          <ion-option-button class="button-calm"
+                             ng-click="share(item)">
+            Share
+        </ion-item>
+          <div class="buttons">
+        <button class="button button-block button-assertive"
+          ng-click="data.showDelete = !data.showDelete;">ยกเลิกการจอง
+          </button>
+      </div>
+      </ion-list>
+    </ion-content>
 </ion-view>

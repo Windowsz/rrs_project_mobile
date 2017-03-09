@@ -2,41 +2,32 @@
   <ion-content>
  <div class="spacer" style=" height: 5px;"></div>
   <!--  <h3 class="assertive" style="text-align: center;"></h4> -->
-    <form id="centralLibraryKMITL-form13" class="list">
-      <label class="item item-select" name="Roomchoosecat">
-        <span class="input-label">ห้อง</span>
-        <select>
-          <option>สัมนากลุ่มย่อย</option>
-          <option>ห้องประชุม</option>
-        </select>
+    <form class="list">
+    <label class="item item-select">
+        ห้อง
+      <select ng-model="sroom">
+         <option value="$">ทั้งหมด</option>
+        <option value="seminar">สัมนากลุ่มย่อย</option>
+        <option value="meeting">ห้องประชุม</option>
+      </select> 
       </label>
       <label class="item item-input">
         <span class="input-label">วันที่เข้าใช้งาน</span>
-        <input type="date">
+        <input type="date" ng-model="filter">
       </label>
       <label class="item item-input">
         <span class="input-label">เวลาที่เข้าใช้งาน</span>
-        <input type="time">
+        <input type="time" ng-model="filter">
       </label>
       <label class="item item-select">
         <span class="input-label">จำนวนผู้เข้าใช้งาน</span>
-        <select>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-          <option>11</option>
-          <option>12</option>
-          <option>13</option>
-          <option>14</option>
-          <option>15</option>
+        <select ng-repeat="id in ALL">
+          <option>{{ id.id }}</option>
         </select>
       </label>
     </form>
     <div class="padding">
-	<button class="button button-block button-positive" style="border-radius: 20px;" ng-click="searching()">ค้นหา</button>
+	<button class="button button-block button-positive" style="border-radius: 20px;" ng-click="setfilter()">ค้นหา</button>
 	</div>
 </ion-content>
 </ion-view>
