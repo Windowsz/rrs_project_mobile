@@ -1,2 +1,2 @@
 # rrs_project_mobile
--This is my project ♥
+- This is my project ♥

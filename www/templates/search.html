@@ -1,7 +1,6 @@
 <ion-view view-title="เลือกประเภทห้องที่ต้องการจอง" id="search">
   <ion-content>
  <div class="spacer" style=" height: 5px;"></div>
-  <!--  <h3 class="assertive" style="text-align: center;"></h4> -->
     <form class="list">
     <label class="item item-select">
         ห้อง
@@ -13,21 +12,21 @@
       </label>
       <label class="item item-input">
         <span class="input-label">วันที่เข้าใช้งาน</span>
-        <input type="date" ng-model="filter">
+        <input type="date" ng-model="sday">
       </label>
       <label class="item item-input">
-        <span class="input-label">เวลาที่เข้าใช้งาน</span>
-        <input type="time" ng-model="filter">
+        <span  class="input-label">เวลาที่เข้าใช้งาน</span>
+        <input ng-model="stime" type="time">
       </label>
       <label class="item item-select">
         <span class="input-label">จำนวนผู้เข้าใช้งาน</span>
-        <select ng-repeat="id in ALL">
-          <option>{{ id.id }}</option>
+        <select>
+          <option value="1" ng-model="susenum">1</option>
         </select>
       </label>
     </form>
     <div class="padding">
-	<button class="button button-block button-positive" style="border-radius: 20px;" ng-click="setfilter()">ค้นหา</button>
+	<button class="button button-block button-positive" ng-click="setfilter()">ค้นหา</button>
 	</div>
 </ion-content>
 </ion-view>

@@ -117,7 +117,7 @@ $http.get(urlShowJson).success( function(data) {
 
 .controller('SplashController', function($scope, $stateParams) {})
 
-.controller('SearchCtrl', function($scope, $ionicPopup, $timeout, $http){
+.controller('SearchCtrl',function($scope, $ionicPopup, $timeout, $http){
   $scope.searching = function(res) {
     $state.go('playlists');
   };
@@ -126,13 +126,7 @@ $http.get(urlShowJson).success( function(data) {
    $scope.ALL =  data;
   console.log(data);
 })
-    $scope.search = {};
-    $scope.setfilter = function() {
-    $scope.search = {};
-    $scope.search[ $scope.sroom , $scope.sday , $scope.stime, $scope.susenum ] = $scope.filter;
 
-    console.log( $scope.search );
-  };
 })
 
 
