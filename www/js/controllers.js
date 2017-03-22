@@ -50,11 +50,6 @@ angular.module('Roomreservation.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout, $http) {
 
-var urlShowJson = "http://localhost:3000/showJson";
-$http.get(urlShowJson).success( function(data) {
-   $scope.ALL =  data;
-  console.log(data);
-});
 })
 
 .controller('ForgotpassCtrl', function($scope, $stateParams) {})
@@ -95,7 +90,7 @@ $http.get(urlShowJson).success( function(data) {
 
 .controller('ProfileCtrl', function($scope, $state, $ionicPopup) {
    $scope.goHome = function(res) {
-    $state.go('app.search');
+    $state.go('playlists');
   };
   $scope.showConfirm = function() {
    var confirmPopup = $ionicPopup.confirm({
@@ -118,35 +113,17 @@ $http.get(urlShowJson).success( function(data) {
 .controller('SplashController', function($scope, $stateParams) {})
 
 .controller('SearchCtrl',function($scope, $ionicPopup, $timeout, $http){
-  $scope.searching = function(res) {
-    $state.go('playlists');
-  };
-    var urlShowJson = "http://localhost:3000/showJson";
-    $http.get(urlShowJson).success( function(data) {
-   $scope.ALL =  data;
-  console.log(data);
+$http.get(urlShowJson).success( function(data) {
+   $scope.usernumber = data.usenum;
+  console.log(data.usenum);
+});
 })
-
-})
-
 
 .controller('CancelCtrl', function($scope, $stateParams) {
   
   $scope.data = {
     showDelete: false
   };
-  
-  $scope.edit = function(item) {
-    alert('Edit Item: ' + item.id);
-  };
-  $scope.share = function(item) {
-    alert('Share Item: ' + item.id);
-  };
-  
-  // $scope.moveItem = function(item, fromIndex, toIndex) {
-  //   $scope.items.splice(fromIndex, 1);
-  //   $scope.items.splice(toIndex, 0, item);
-  // };
   
   $scope.onItemDelete = function(item) {
     $scope.items.splice($scope.items.indexOf(item), 1);

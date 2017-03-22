@@ -4,7 +4,7 @@ angular.module('Roomreservation', ['ionic','Roomreservation.controllers'])
 
   $stateProvider
 
-    .state('app', {
+    .state('app', {                                                                                                                                                                                                                                      
     url: "/app",
     abstract: true,
     templateUrl: "templates/menu.html",
@@ -16,8 +16,6 @@ angular.module('Roomreservation', ['ionic','Roomreservation.controllers'])
     templateUrl: "templates/playlists.html",
     controller: 'PlaylistsCtrl'
   })
-
-
 
   .state('regchoose', {
     url: '/regchoose',
@@ -127,5 +125,4 @@ angular.module('Roomreservation', ['ionic','Roomreservation.controllers'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
-
 });

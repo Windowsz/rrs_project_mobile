@@ -3,7 +3,7 @@
   <ion-content>
   <div class="spacer" style="height: 2%;"></div>
     <ion-list>
-      <ion-item ui-sref="#/app/playlists/{{lists.id}}" ng-repeat="lists in ALL">
+      <ion-item ui-sref="#/app/playlists/{{lists.id}}" ng-repeat="lists in ALL | filter:search">
       <div class="item item-body">
       <img class="full-image" src="{{lists.image}}">
         <h2>{{lists.title}}</h2>
